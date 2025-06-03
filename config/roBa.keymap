@@ -15,6 +15,11 @@
     combos {
         compatible = "zmk,combos";
 
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <10 11>;
+        };
+
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
@@ -25,12 +30,7 @@
             key-positions = <12 13>;
         };
 
-        escape {
-            bindings = <&kp ESC>;
-            key-positions = <11 10>;
-        };
-
-        backquote {
+        back_quote {
             bindings = <&kp GRAVE>;
             key-positions = <16 17>;
         };
@@ -90,15 +90,6 @@
 &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp DOLLAR    &kp PERCENT  &trans      &trans  &kp CARET     &kp AMPERSAND   &kp ASTERISK     &kp PLUS          &kp EQUAL
 &kp QUESTION     &kp SLASH     &kp BACKSLASH  &kp PIPE      &kp TILDE    &trans      &trans  &kp INT_YEN   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans           &trans        &trans         &trans        &trans       &trans      &trans  &trans                                                           &trans
-            >;
-        };
-
-        NONE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
