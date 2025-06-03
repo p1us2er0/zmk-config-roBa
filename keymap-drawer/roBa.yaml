@@ -21,7 +21,7 @@ layers:
   - H
   - J
   - K
-  - {t: '&to_layer_0 L', h: SCROLL}
+  - {t: L, h: SCROLL}
   - (
   - {t: Z, h: LEFT SHIFT}
   - X
