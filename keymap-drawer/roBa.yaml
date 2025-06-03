@@ -29,7 +29,7 @@ layers:
   - V
   - B
   - ;
-  - {t: '=', h: RIGHT SHIFT}
+  - {t: '-', h: RIGHT SHIFT}
   - N
   - M
   - ','
@@ -65,8 +65,8 @@ layers:
   - ^
   - '&'
   - '*'
-  - '-'
-  - _
+  - +
+  - '='
   - '?'
   - /
   - \
@@ -270,6 +270,8 @@ combos:
 - p: [12, 13]
   k: Sft+TAB
 - p: [11, 10]
-  k: '&to_layer_0 ESC'
+  k: ESC
 - p: [16, 17]
   k: '`'
+- p: [18, 17]
+  k: '='
