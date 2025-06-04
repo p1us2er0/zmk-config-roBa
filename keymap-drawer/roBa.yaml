@@ -153,7 +153,7 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp LCLK'
   - '&mkp RCLK'
-  - {t: ▽, type: trans}
+  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - LEFT SHIFT
   - Ctl+LEFT ARROW
