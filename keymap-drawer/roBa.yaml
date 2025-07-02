@@ -38,12 +38,12 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - LEFT CONTROL
-  - {t: '&to_layer_0 LANG2', h: NUM}
+  - {t: '&to_layer_0_lang2 LANG2', h: NUM}
   - SPACE
   - {t: '&to_layer_0 LANG1', h: MOUSE}
-  - {t: BACKSPACE, h: FUNCTION}
+  - BACKSPACE
   - ENTER
-  - '&mkp RCLK'
+  - {t: FUNCTION, h: toggle}
   NUM:
   - '1'
   - '2'
@@ -129,7 +129,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
   MOUSE:
@@ -221,11 +221,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [10, 11]
+- p: [0, 1]
   k: ESC
-- p: [11, 12]
+- p: [10, 11]
   k: TAB
-- p: [12, 13]
+- p: [11, 12]
   k: Sft+TAB
 - p: [16, 17]
   k: '`'
