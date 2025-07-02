@@ -52,7 +52,7 @@
         to_layer_0_lang2: to_layer_0_lang2 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LANG2 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+            bindings = <&kp LANG2 &mo 1 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0_LANG2";
         };
     };
