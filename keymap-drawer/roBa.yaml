@@ -38,8 +38,8 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - LEFT CONTROL
+  - {t: '&to_layer_0 LANG2', h: '&to_layer_0_lang2 1'}
   - SPACE
-  - {t: '&to_layer_0 LANG2', h: NUM}
   - {t: '&to_layer_0 LANG1', h: MOUSE}
   - BACKSPACE
   - ENTER
@@ -83,7 +83,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
