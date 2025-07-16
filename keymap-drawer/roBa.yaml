@@ -67,14 +67,14 @@ layers:
   - '*'
   - +
   - '='
-  - '?'
+  - {t: ▽, type: trans}
   - /
   - \
   - '|'
   - '~'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - INT YEN
+  - '?'
   - '{'
   - '}'
   - '['
@@ -225,7 +225,7 @@ combos:
   k: ESC
 - p: [11, 12]
   k: TAB
-- p: [12, 13]
+- p: [10, 11]
   k: Sft+TAB
 - p: [16, 17]
   k: '`'
