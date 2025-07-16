@@ -39,6 +39,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <18 17>;
         };
+
+        comment {
+            bindings = <&kp LG(SLASH)>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
