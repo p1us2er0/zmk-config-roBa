@@ -163,8 +163,8 @@ layers:
   - {type: held}
   - '&bootloader'
   - {t: WIN, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CAPSLOCK
+  - INTERNATIONAL 1
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
