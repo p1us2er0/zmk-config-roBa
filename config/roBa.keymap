@@ -123,7 +123,7 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt_mac 0  &bt_win 1  &bt_mac 2  &bt_mac 3  &bt_mac 4
+&trans  &trans  &trans  &trans  &trans                           &bt_mac 0  &bt_mac 1  &bt_mac 2  &bt_win 3  &bt_win 4
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans      &sys_reset   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &tog 1     &trans     &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                      &bt BT_CLR
