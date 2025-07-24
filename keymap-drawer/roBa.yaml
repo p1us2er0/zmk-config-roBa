@@ -139,10 +139,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&bt_mac'
-  - '&bt_win 1'
+  - '&bt_mac 1'
   - '&bt_mac 2'
-  - '&bt_mac 3'
-  - '&bt_mac 4'
+  - '&bt_win 3'
+  - '&bt_win 4'
   - F1
   - F2
   - F3
