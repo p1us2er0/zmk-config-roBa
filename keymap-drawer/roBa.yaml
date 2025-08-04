@@ -154,19 +154,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Sft+8
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: Sft+-, s: Sft+;}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&td_comma_left_parenthesis'
+  - '&td_dot_right_parenthesis'
+  - Sft+9
   - LEFT CONTROL
   - {t: ▽, type: trans}
   - LEFT WIN
@@ -197,8 +197,8 @@ layers:
   - '='
   - Sft+6
   - Sft+'
-  - Sft+;
-  - Sft+-
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - /
   - INT1
