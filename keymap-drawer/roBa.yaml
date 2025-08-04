@@ -32,8 +32,8 @@ layers:
   - {t: '-', h: RIGHT SHIFT}
   - N
   - M
-  - ','
-  - .
+  - '&td_comma_left_parenthesis'
+  - '&td_dot_right_parenthesis'
   - )
   - LEFT WIN
   - LEFT ALT
@@ -109,8 +109,8 @@ layers:
   - ^
   - '&'
   - '*'
-  - +
-  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - /
   - \
