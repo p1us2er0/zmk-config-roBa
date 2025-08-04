@@ -4,6 +4,45 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZKHK_JIS            GRAVE                  // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
+#define MINUS_JIS           MINUS                  // -
+#define CARET_JIS           EQUAL                  // ^
+#define YEN_JIS             INT3                   // ¥
+#define AT_SIGN_JIS         LBKT                   // @
+#define LEFT_BRACKET_JIS    RBKT                   // [
+#define EISU_JIS            CAPS                   // Eisū (英数)
+#define SEMI_JIS            SEMI                   // ;
+#define COLON_JIS           SQT                    // :
+#define RIGHT_BRACKET_JIS   NUHS                   // ]
+#define COMMA_JIS           COMMA                  // ,
+#define DOT_JIS             DOT                    // .
+#define SLASH_JIS           SLASH                  // /
+#define BACKSLASH_JIS       INT1                   // (backslash)
+#define MHEN_JIS            INT5                   // Muhenkan (無変換)
+#define HENK_JIS            INT4                   // Henkan (変換)
+#define KANA_JIS            INT2                   // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
+#define EXCLAMATION_JIS     LS(N1)                 // !
+#define DOUBLE_QUOTE_JIS    LS(N2)                 // "
+#define HASH_JIS            LS(N3)                 // #
+#define DOLLAR_JIS          LS(N4)                 // $
+#define PERCENT_JIS         LS(N5)                 // %
+#define AMPERSAND_JIS       LS(N6)                 // &
+#define SINGLE_QUOTE_JIS    LS(N7)                 // '
+#define LPAR_JIS            LS(N8)                 // (
+#define RPAR_JIS            LS(N9)                 // )
+#define EQUAL_JIS           LS(MINUS_JIS)          // =
+#define TILDE_JIS           LS(CARET_JIS)          // ~
+#define PIPE_JIS            LS(YEN_JIS)            // |
+#define GRAVE_JIS           LS(AT_SIGN_JIS)        // `
+#define LEFT_BRACE_JIS      LS(LEFT_BRACKET_JIS)   // {
+#define CAPS_JIS            LS(EISU_JIS)           // Caps Lock
+#define PLUS_JIS            LS(SEMI_JIS)           // +
+#define ASTERISK_JIS        LS(COLON_JIS)          // *
+#define RIGHT_BRACE_JIS     LS(RIGHT_BRACKET_JIS)  // }
+#define LT_JIS              LS(COMMA_JIS)          // <
+#define RT_JIS              LS(DOT_JIS)            // >
+#define QUESTION_JIS        LS(SLASH_JIS)          // ?
+#define UNDER_JIS           LS(BACKSLASH_JIS)      // _
 
 &mt {
     flavor = "balanced";
@@ -30,6 +69,11 @@
             key-positions = <10 11>;
         };
 
+        comment {
+            bindings = <&kp LG(SLASH)>;
+            key-positions = <12 13>;
+        };
+
         back_quote {
             bindings = <&kp GRAVE>;
             key-positions = <16 17>;
@@ -37,12 +81,19 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <18 17>;
+            key-positions = <17 18>;
         };
 
-        comment {
-            bindings = <&kp LG(SLASH)>;
-            key-positions = <12 13>;
+        back_quote_jis {
+            bindings = <&kp GRAVE_JIS>;
+            layers = <3>;
+            key-positions = <16 17>;
+        };
+
+        equal_jis {
+            bindings = <&equal_jis>;
+            layers = <3>;
+            key-positions = <17 18>;
         };
     };
 
@@ -54,18 +105,25 @@
             label = "TO_LAYER_0";
         };
 
-        bt_win: new_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&tog 1 &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
-            label = "NEW_MACRO";
-        };
-
         bt_mac: bt_mac {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "BT_MAC";
+        };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog 1 &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "BT_WIN";
+        };
+
+        bt_win_jis: bt_win_jis {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog 3 &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "BT_WIN_JIS";
         };
     };
 
@@ -87,6 +145,42 @@
 
             tap-ms = <20>;
         };
+
+        single_quote_jis: single_quote_jis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SINGLE_QUOTE_JIS";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE_JIS>, <&kp DOUBLE_QUOTE_JIS>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        equal_jis: equal_jis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUAL_JIS";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL_JIS>, <&kp PLUS_JIS>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        semi_jis: semi_jis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_JIS";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI_JIS>, <&kp COLON_JIS>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lt_semi_jis: lt_semi_jis {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SEMI_JIS";
+            bindings = <&mo>, <&semi_jis>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+        };
     };
 
     keymap {
@@ -95,9 +189,9 @@
         DEFAULT {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R        &kp T                                              &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D             &kp F        &kp G      &mkp LCLK        &kp SINGLE_QUOTE       &kp H      &kp J  &kp K      &lt 5 L  &kp LEFT_PARENTHESIS
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V        &kp B      &lt 3 SEMI       &mt RIGHT_SHIFT MINUS  &kp N      &kp M  &kp COMMA  &kp DOT  &kp RIGHT_PARENTHESIS
-&kp LEFT_WIN      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 2 LANG2  &kp SPACE  &lt 4 LANG1      &kp BACKSPACE          &kp ENTER                             &trans
+&kp A             &kp S         &kp D             &kp F        &kp G      &mkp LCLK        &kp SINGLE_QUOTE       &kp H      &kp J  &kp K      &lt 7 L  &kp LEFT_PARENTHESIS
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V        &kp B      &lt 5 SEMI       &mt RIGHT_SHIFT MINUS  &kp N      &kp M  &kp COMMA  &kp DOT  &kp RIGHT_PARENTHESIS
+&kp LEFT_WIN      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 2 LANG2  &kp SPACE  &lt 6 LANG1      &kp BACKSPACE          &kp ENTER                             &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -121,9 +215,27 @@
             >;
         };
 
+        WIN_JIS {
+            bindings = <
+&trans            &trans  &trans        &trans       &trans                                 &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans        &trans       &trans  &trans      &single_quote_jis  &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans        &trans       &trans  &trans      &trans             &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &trans  &kp LEFT_WIN  &lt 4 LANG2  &trans  &trans      &trans             &trans                          &trans
+            >;
+        };
+
+        NUM_JIS {
+            bindings = <
+&kp NUMBER_1         &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4    &kp N5                               &kp NUMBER_6      &kp N7              &kp N8               &kp N9                &kp N0
+&kp EXCLAMATION_JIS  &kp AT_SIGN_JIS  &kp HASH_JIS       &kp DOLLAR_JIS  &kp PERCENT_JIS  &trans      &trans  &kp CARET_JIS     &kp AMPERSAND_JIS   &kp ASTERISK_JIS     &kp PLUS_JIS          &kp EQUAL_JIS
+&trans               &kp SLASH_JIS    &kp BACKSLASH_JIS  &kp PIPE_JIS    &kp TILDE_JIS    &trans      &trans  &kp QUESTION_JIS  &kp LEFT_BRACE_JIS  &kp RIGHT_BRACE_JIS  &kp LEFT_BRACKET_JIS  &kp RIGHT_BRACKET_JIS
+&trans               &trans           &trans             &trans          &trans           &trans      &trans  &trans                                                                           &trans
+            >;
+        };
+
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt_mac 0  &bt_mac 1  &bt_mac 2  &bt_win 3  &bt_win 4
+&trans  &trans  &trans  &trans  &trans                           &bt_mac 0  &bt_mac 1  &bt_mac 2  &bt_win 3  &bt_win_jis 4
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans      &sys_reset   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &tog 1     &trans     &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                      &bt BT_CLR

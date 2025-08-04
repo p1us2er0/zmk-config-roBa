@@ -132,6 +132,94 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  WIN_JIS:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Sft+7, s: Sft+2}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT CONTROL
+  - {t: ▽, type: trans}
+  - LEFT WIN
+  - {t: LANG2, h: NUM_JIS}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NUM_JIS:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Sft+1
+  - '['
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '='
+  - Sft+6
+  - Sft+'
+  - Sft+;
+  - Sft+-
+  - {t: ▽, type: trans}
+  - /
+  - INT1
+  - Sft+INT3
+  - Sft+=
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+/
+  - Sft+]
+  - Sft+#
+  - ']'
+  - '#'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   FUNCTION:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +230,7 @@ layers:
   - '&bt_mac 1'
   - '&bt_mac 2'
   - '&bt_win 3'
-  - '&bt_win 4'
+  - '&bt_win_jis 4'
   - F1
   - F2
   - F3
@@ -271,9 +359,15 @@ combos:
   k: TAB
 - p: [10, 11]
   k: Sft+TAB
-- p: [16, 17]
-  k: '`'
-- p: [18, 17]
-  k: '='
 - p: [12, 13]
   k: Gui+/
+- p: [16, 17]
+  k: '`'
+- p: [17, 18]
+  k: '='
+- p: [16, 17]
+  k: Sft+[
+  l: [WIN_JIS]
+- p: [17, 18]
+  k: {t: Sft+-, s: Sft+;}
+  l: [WIN_JIS]
