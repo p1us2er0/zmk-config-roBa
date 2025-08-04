@@ -4,45 +4,46 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
-#define ZKHK_JIS            GRAVE                  // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
-#define MINUS_JIS           MINUS                  // -
-#define CARET_JIS           EQUAL                  // ^
-#define YEN_JIS             INT3                   // ¥
-#define AT_SIGN_JIS         LBKT                   // @
-#define LEFT_BRACKET_JIS    RBKT                   // [
-#define EISU_JIS            CAPS                   // Eisū (英数)
-#define SEMI_JIS            SEMI                   // ;
-#define COLON_JIS           SQT                    // :
-#define RIGHT_BRACKET_JIS   NUHS                   // ]
-#define COMMA_JIS           COMMA                  // ,
-#define DOT_JIS             DOT                    // .
-#define SLASH_JIS           SLASH                  // /
-#define BACKSLASH_JIS       INT1                   // (backslash)
-#define MHEN_JIS            INT5                   // Muhenkan (無変換)
-#define HENK_JIS            INT4                   // Henkan (変換)
-#define KANA_JIS            INT2                   // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
-#define EXCLAMATION_JIS     LS(N1)                 // !
-#define DOUBLE_QUOTE_JIS    LS(N2)                 // "
-#define HASH_JIS            LS(N3)                 // #
-#define DOLLAR_JIS          LS(N4)                 // $
-#define PERCENT_JIS         LS(N5)                 // %
-#define AMPERSAND_JIS       LS(N6)                 // &
-#define SINGLE_QUOTE_JIS    LS(N7)                 // '
-#define LPAR_JIS            LS(N8)                 // (
-#define RPAR_JIS            LS(N9)                 // )
-#define EQUAL_JIS           LS(MINUS_JIS)          // =
-#define TILDE_JIS           LS(CARET_JIS)          // ~
-#define PIPE_JIS            LS(YEN_JIS)            // |
-#define GRAVE_JIS           LS(AT_SIGN_JIS)        // `
-#define LEFT_BRACE_JIS      LS(LEFT_BRACKET_JIS)   // {
-#define CAPS_JIS            LS(EISU_JIS)           // Caps Lock
-#define PLUS_JIS            LS(SEMI_JIS)           // +
-#define ASTERISK_JIS        LS(COLON_JIS)          // *
-#define RIGHT_BRACE_JIS     LS(RIGHT_BRACKET_JIS)  // }
-#define LT_JIS              LS(COMMA_JIS)          // <
-#define RT_JIS              LS(DOT_JIS)            // >
-#define QUESTION_JIS        LS(SLASH_JIS)          // ?
-#define UNDER_JIS           LS(BACKSLASH_JIS)      // _
+
+#define ZKHK_JIS                  GRAVE                  // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
+#define MINUS_JIS                 MINUS                  // -
+#define CARET_JIS                 EQUAL                  // ^
+#define YEN_JIS                   INT3                   // ¥
+#define AT_SIGN_JIS               LBKT                   // @
+#define LEFT_BRACKET_JIS          RBKT                   // [
+#define EISU_JIS                  CAPS                   // Eisū (英数)
+#define SEMI_JIS                  SEMI                   // ;
+#define COLON_JIS                 SQT                    // :
+#define RIGHT_BRACKET_JIS         NUHS                   // ]
+#define COMMA_JIS                 COMMA                  // ,
+#define DOT_JIS                   DOT                    // .
+#define SLASH_JIS                 SLASH                  // /
+#define BACKSLASH_JIS             INT1                   // (backslash)
+#define MHEN_JIS                  INT5                   // Muhenkan (無変換)
+#define HENK_JIS                  INT4                   // Henkan (変換)
+#define KANA_JIS                  INT2                   // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
+#define EXCLAMATION_JIS           LS(N1)                 // !
+#define DOUBLE_QUOTE_JIS          LS(N2)                 // "
+#define HASH_JIS                  LS(N3)                 // #
+#define DOLLAR_JIS                LS(N4)                 // $
+#define PERCENT_JIS               LS(N5)                 // %
+#define AMPERSAND_JIS             LS(N6)                 // &
+#define SINGLE_QUOTE_JIS          LS(N7)                 // '
+#define LEFT_PARENTHESIS_JIS      LS(N8)                 // (
+#define RIGHT_PARENTHESIS_JIS     LS(N9)                 // )
+#define EQUAL_JIS                 LS(MINUS_JIS)          // =
+#define TILDE_JIS                 LS(CARET_JIS)          // ~
+#define PIPE_JIS                  LS(YEN_JIS)            // |
+#define GRAVE_JIS                 LS(AT_SIGN_JIS)        // `
+#define LEFT_BRACE_JIS            LS(LEFT_BRACKET_JIS)   // {
+#define CAPS_JIS                  LS(EISU_JIS)           // Caps Lock
+#define PLUS_JIS                  LS(SEMI_JIS)           // +
+#define ASTERISK_JIS              LS(COLON_JIS)          // *
+#define RIGHT_BRACE_JIS           LS(RIGHT_BRACKET_JIS)  // }
+#define LT_JIS                    LS(COMMA_JIS)          // <
+#define RT_JIS                    LS(DOT_JIS)            // >
+#define QUESTION_JIS              LS(SLASH_JIS)          // ?
+#define UNDER_JIS                 LS(BACKSLASH_JIS)      // _
 
 &mt {
     flavor = "balanced";
@@ -148,6 +149,20 @@
             tap-ms = <20>;
         };
 
+        td_comma_left_parenthesis: td_comma_left_parenthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMA_LEFT_PARENTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LEFT_PARENTHESIS>;
+        };
+
+        td_dot_right_parenthesis: td_dot_right_parenthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOT_RIGHT_PARENTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp RIGHT_PARENTHESIS>;
+        };
+
         single_quote_jis: single_quote_jis {
             compatible = "zmk,behavior-mod-morph";
             label = "SINGLE_QUOTE_JIS";
@@ -184,18 +199,18 @@
             tapping-term-ms = <500>;
         };
 
-        td_comma_left_parenthesis: td_comma_left_parenthesis {
+        td_comma_left_parenthesis_jis: td_comma_left_parenthesis_jis {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_COMMA_LEFT_PARENTHESIS";
+            label = "TD_COMMA_LEFT_PARENTHESIS_JIS";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp COMMA_JIS>, <&kp LEFT_PARENTHESIS_JIS>;
         };
 
-        td_dot_right_parenthesis: td_dot_right_parenthesis {
+        td_dot_right_parenthesis_jis: td_dot_right_parenthesis_jis {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOT_RIGHT_PARENTHESIS";
+            label = "TD_DOT_RIGHT_PARENTHESIS_JIS";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp DOT_JIS>, <&kp RIGHT_PARENTHESIS_JIS>;
         };
     };
 
@@ -234,8 +249,8 @@
         WIN_JIS {
             bindings = <
 &trans            &trans  &trans        &trans       &trans                                 &trans  &trans  &trans  &trans  &trans
-&trans            &trans  &trans        &trans       &trans  &trans      &single_quote_jis  &trans  &trans  &trans  &trans  &trans
-&trans            &trans  &trans        &trans       &trans  &trans      &trans             &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans        &trans       &trans  &trans      &single_quote_jis  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS_JIS
+&trans            &trans  &trans        &trans       &trans  &trans      &equal_jis         &trans  &trans  &td_comma_left_parenthesis  &td_dot_right_parenthesis  &kp RIGHT_PARENTHESIS_JIS
 &kp LEFT_CONTROL  &trans  &kp LEFT_WIN  &lt 4 LANG2  &trans  &trans      &trans             &trans                          &trans
             >;
         };
@@ -243,7 +258,7 @@
         NUM_JIS {
             bindings = <
 &kp NUMBER_1         &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4    &kp N5                               &kp NUMBER_6      &kp N7              &kp N8               &kp N9                &kp N0
-&kp EXCLAMATION_JIS  &kp AT_SIGN_JIS  &kp HASH_JIS       &kp DOLLAR_JIS  &kp PERCENT_JIS  &trans      &trans  &kp CARET_JIS     &kp AMPERSAND_JIS   &kp ASTERISK_JIS     &kp PLUS_JIS          &kp EQUAL_JIS
+&kp EXCLAMATION_JIS  &kp AT_SIGN_JIS  &kp HASH_JIS       &kp DOLLAR_JIS  &kp PERCENT_JIS  &trans      &trans  &kp CARET_JIS     &kp AMPERSAND_JIS   &kp ASTERISK_JIS     &trans                &trans
 &trans               &kp SLASH_JIS    &kp BACKSLASH_JIS  &kp PIPE_JIS    &kp TILDE_JIS    &trans      &trans  &kp QUESTION_JIS  &kp LEFT_BRACE_JIS  &kp RIGHT_BRACE_JIS  &kp LEFT_BRACKET_JIS  &kp RIGHT_BRACKET_JIS
 &trans               &trans           &trans             &trans          &trans           &trans      &trans  &trans                                                                           &trans
             >;
