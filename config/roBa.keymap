@@ -76,23 +76,25 @@
 
         back_quote {
             bindings = <&kp GRAVE>;
+            layers = <0, 1, 2>;
             key-positions = <16 17>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
+            layers = <0, 1, 2>;
             key-positions = <17 18>;
         };
 
         back_quote_jis {
             bindings = <&kp GRAVE_JIS>;
-            layers = <3>;
+            layers = <3, 4>;
             key-positions = <16 17>;
         };
 
         equal_jis {
             bindings = <&equal_jis>;
-            layers = <3>;
+            layers = <3, 4>;
             key-positions = <17 18>;
         };
     };
