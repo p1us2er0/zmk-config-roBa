@@ -363,11 +363,13 @@ combos:
   k: Gui+/
 - p: [16, 17]
   k: '`'
+  l: [DEFAULT, WIN, NUM]
 - p: [17, 18]
   k: '='
+  l: [DEFAULT, WIN, NUM]
 - p: [16, 17]
   k: Sft+[
-  l: [WIN_JIS]
+  l: [WIN_JIS, NUM_JIS]
 - p: [17, 18]
   k: {t: Sft+-, s: Sft+;}
-  l: [WIN_JIS]
+  l: [WIN_JIS, NUM_JIS]
