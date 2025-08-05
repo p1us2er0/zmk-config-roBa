@@ -22,7 +22,7 @@ layers:
   - J
   - K
   - {t: L, h: SCROLL}
-  - (
+  - {t: ▽, type: trans}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -34,7 +34,7 @@ layers:
   - M
   - '&td_comma_left_parenthesis'
   - '&td_dot_right_parenthesis'
-  - )
+  - {t: ▽, type: trans}
   - LEFT WIN
   - LEFT ALT
   - LEFT CONTROL
@@ -43,7 +43,7 @@ layers:
   - {t: LANG1, h: MOUSE}
   - BACKSPACE
   - ENTER
-  - {t: ▽, type: trans}
+  - DELETE
   WIN:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,19 +154,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+8
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Sft+-, s: Sft+;}
+  - {t: ;, h: FUNCTION, s: ''''}
+  - {t: '-', h: LEFT SHIFT, s: Sft+INT1}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&td_comma_left_parenthesis'
-  - '&td_dot_right_parenthesis'
-  - Sft+9
+  - '&td_comma_left_parenthesis_jis'
+  - '&td_dot_right_parenthesis_jis'
+  - {t: ▽, type: trans}
   - LEFT CONTROL
   - {t: ▽, type: trans}
   - LEFT WIN
@@ -250,11 +250,11 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - '&bootloader'
-  - {t: WIN, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mac_us'
+  - '&win_us'
+  - '&win_jis'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
