@@ -373,3 +373,15 @@ combos:
 - p: [17, 18]
   k: {t: Sft+-, s: Sft+;}
   l: [WIN_JIS, NUM_JIS]
+- p: [22, 23]
+  k: Gui+LEFT ARROW
+  l: [DEFAULT]
+- p: [23, 24]
+  k: Gui+RIGHT ARROW
+  l: [DEFAULT]
+- p: [22, 23]
+  k: Alt+LEFT ARROW
+  l: [WIN, WIN_JIS]
+- p: [23, 24]
+  k: Alt+RIGHT ARROW
+  l: [WIN, WIN_JIS]
