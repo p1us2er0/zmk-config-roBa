@@ -292,12 +292,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DEFAULT {
+        MAC {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R        &kp T                                              &kp Y      &kp U  &kp I                       &kp O                      &kp P
 &kp A             &kp S         &kp D             &kp F        &kp G      &mkp LCLK        &kp SINGLE_QUOTE       &kp H      &kp J  &kp K                       &lt 7 L                    &trans
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V        &kp B      &lt 5 SEMI       &mt RIGHT_SHIFT MINUS  &kp N      &kp M  &td_comma_left_parenthesis  &td_dot_right_parenthesis  &trans
-&kp LEFT_WIN      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 2 LANG2  &kp SPACE  &lt 6 LANG1      &kp BACKSPACE          &kp ENTER                                                                &kp DELETE
+&kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 2 LANG2  &kp SPACE  &lt 6 LANG1      &kp BACKSPACE          &kp ENTER                                                                &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
