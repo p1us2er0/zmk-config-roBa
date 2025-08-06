@@ -266,7 +266,7 @@ layers:
   - BT CLR
   MOUSE:
   - HOME
-  - {t: ▽, type: trans}
+  - Alt+Gui+UP ARROW
   - UP ARROW
   - Ctl+Sft+TAB
   - Ctl+TAB
@@ -290,8 +290,8 @@ layers:
   - LEFT SHIFT
   - Ctl+LEFT ARROW
   - Ctl+RIGHT ARROW
-  - Gui+Sft+LEFT ARROW
-  - Gui+Sft+RIGHT ARROW
+  - Sft+LEFT ARROW
+  - Sft+RIGHT ARROW
   - Gui+Sft+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
