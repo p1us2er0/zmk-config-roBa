@@ -266,7 +266,7 @@ layers:
   - BT CLR
   MOUSE:
   - HOME
-  - Alt+Gui+UP ARROW
+  - Gui+UP ARROW
   - UP ARROW
   - Ctl+Sft+TAB
   - Ctl+TAB
