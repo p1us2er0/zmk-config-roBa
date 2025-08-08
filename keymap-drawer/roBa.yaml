@@ -361,12 +361,16 @@ combos:
   k: Sft+TAB
 - p: [12, 13]
   k: Gui+/
+  l: [MAC, WIN, NUM]
 - p: [16, 17]
   k: '`'
   l: [MAC, WIN, NUM]
 - p: [17, 18]
   k: '='
   l: [MAC, WIN, NUM]
+- p: [12, 13]
+  k: Gui+/
+  l: [WIN_JIS, NUM_JIS]
 - p: [16, 17]
   k: Sft+[
   l: [WIN_JIS, NUM_JIS]
