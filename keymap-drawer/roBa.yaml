@@ -22,7 +22,7 @@ layers:
   - J
   - K
   - {t: L, h: SCROLL}
-  - {t: ▽, type: trans}
+  - F2
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -34,7 +34,7 @@ layers:
   - M
   - '&td_comma_left_parenthesis'
   - '&td_dot_right_parenthesis'
-  - {t: ▽, type: trans}
+  - F7
   - LEFT GUI
   - LEFT ALT
   - LEFT CONTROL
