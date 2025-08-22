@@ -369,7 +369,7 @@ combos:
   k: '='
   l: [MAC, WIN, NUM]
 - p: [12, 13]
-  k: Gui+/
+  k: Ctl+/
   l: [WIN_JIS, NUM_JIS]
 - p: [16, 17]
   k: Sft+[
