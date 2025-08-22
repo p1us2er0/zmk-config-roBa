@@ -88,7 +88,7 @@
         };
 
         comment_jis {
-            bindings = <&kp LG(SLASH_JIS)>;
+            bindings = <&kp LC(SLASH_JIS)>;
             key-positions = <12 13>;
             layers = <3 4>;
         };
